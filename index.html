@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoodForge • AI Mood Board Generator</title>
+    <title>SonomaForge • Free Mood Board Generator for Wine Country Events</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
-        
-        :root {
-            --primary: #6366f1;
-        }
         
         body {
             font-family: 'Inter', system_ui, sans-serif;
@@ -60,6 +56,10 @@
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(12px);
         }
+
+        .trending-badge {
+            animation: pulse 2s infinite;
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-white">
@@ -67,24 +67,24 @@
     <nav class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-x-3">
-                <div class="w-10 h-10 bg-indigo-600 rounded-2xl flex items-center justify-center">
-                    <i class="fa-solid fa-palette text-white text-2xl"></i>
+                <div class="w-10 h-10 bg-emerald-600 rounded-2xl flex items-center justify-center">
+                    <i class="fa-solid fa-wine-glass text-white text-2xl"></i>
                 </div>
                 <div>
-                    <span class="font-bold text-2xl tracking-tight">MoodForge</span>
-                    <span class="text-indigo-400 text-xs font-medium tracking-[3px] block -mt-1">AI</span>
+                    <span class="font-bold text-2xl tracking-tight">SonomaForge</span>
+                    <span class="text-emerald-400 text-xs font-medium tracking-[3px] block -mt-1">WINE COUNTRY</span>
                 </div>
             </div>
             
             <div class="flex items-center gap-x-4">
                 <div class="hidden md:flex items-center bg-slate-900 rounded-full px-4 py-1.5 text-sm">
                     <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse mr-2"></div>
-                    <span class="text-emerald-400 text-xs font-medium">12,847 boards generated today</span>
+                    <span class="text-emerald-400 text-xs font-medium">4,872 boards generated this week</span>
                 </div>
                 <a href="#" onclick="showUpgradeModal()" 
                    class="px-5 py-2.5 bg-white text-slate-900 hover:bg-slate-100 transition-colors rounded-2xl text-sm font-semibold flex items-center gap-x-2">
                     <i class="fa-solid fa-rocket"></i>
-                    <span>Upgrade to Pro</span>
+                    <span>Book a Call</span>
                 </a>
             </div>
         </div>
@@ -93,13 +93,42 @@
     <div class="max-w-7xl mx-auto px-6 pt-12 pb-20">
         
         <!-- Hero -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <div class="inline-flex items-center gap-x-2 bg-slate-900 border border-slate-700 rounded-full px-4 py-1 mb-6">
-                <span class="text-emerald-400 text-xs font-semibold tracking-widest">FREE FOREVER</span>
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <div class="inline-flex items-center gap-x-2 bg-emerald-900/50 border border-emerald-700 rounded-full px-4 py-1 mb-6">
+                <span class="text-emerald-400 text-xs font-semibold tracking-widest">BUILT FOR SONOMA COUNTY</span>
             </div>
             
-            <h1 class="section-header mb-4">Create stunning mood boards<br>in seconds</h1>
-            <p class="text-xl text-slate-400 max-w-md mx-auto">The free AI-powered generator used by 47k+ designers, brands &amp; creators.</p>
+            <h1 class="section-header mb-4">Free mood boards<br>made for Wine Country</h1>
+            <p class="text-xl text-slate-400 max-w-md mx-auto">Instant AI generator for weddings, mitzvahs, corporate events &amp; celebrations. Full color palettes, local shopping lists &amp; visual references in seconds.</p>
+        </div>
+
+        <!-- TRENDING BANNER - ROOTED ROMANCE 2026 -->
+        <div class="max-w-4xl mx-auto mb-10">
+            <div class="bg-gradient-to-r from-purple-950 via-rose-950 to-slate-900 border border-rose-800 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-1">
+                    <div class="inline-flex items-center gap-x-2 bg-rose-600 text-white text-xs font-bold px-4 py-1 rounded-full mb-4 trending-badge">
+                        <i class="fa-solid fa-fire"></i>
+                        <span>TRENDING #1 ON PINTEREST 2026</span>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-3">Rooted Romance Sonoma</h2>
+                    <p class="text-xl text-rose-200 mb-4">Plum • Olive • Terracotta • Fig • Merlot. The most saved wedding &amp; mitzvah aesthetic right now.</p>
+                    
+                    <button onclick="quickTheme('Rooted Romance Sonoma 2026 - plum olive terracotta fig merlot vineyard luxury')" 
+                            class="px-10 py-4 bg-white hover:bg-rose-100 transition-all text-slate-900 font-bold rounded-2xl flex items-center gap-x-3 text-lg shadow-lg">
+                        <span>Generate This Trending Board FREE</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <div class="text-rose-400 text-xs mt-2">+1,380% searches this month • Pinterest Wedding Trends 2026</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex gap-2">
+                        <div class="w-16 h-16 rounded-2xl" style="background-color: #4A2C4A;"></div>
+                        <div class="w-16 h-16 rounded-2xl" style="background-color: #556B2F;"></div>
+                        <div class="w-16 h-16 rounded-2xl" style="background-color: #C65D3B;"></div>
+                        <div class="w-16 h-16 rounded-2xl" style="background-color: #722F37;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Generator -->
@@ -109,22 +138,20 @@
                 <!-- Input Form -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                     
-                    <!-- Theme -->
                     <div class="md:col-span-7">
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Describe your vibe or project</label>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Describe your event or vibe</label>
                         <input id="theme-input" type="text" 
-                               class="w-full bg-slate-800 border border-slate-700 focus:border-indigo-500 text-white placeholder-slate-500 rounded-2xl px-5 py-3.5 text-lg focus:outline-none transition-all"
-                               placeholder="e.g. coastal boho luxury villa, dark academia fashion brand, minimalist tech startup">
+                               class="w-full bg-slate-800 border border-slate-700 focus:border-emerald-500 text-white placeholder-slate-500 rounded-2xl px-5 py-3.5 text-lg focus:outline-none transition-all"
+                               placeholder="e.g. Redwood Bar Mitzvah, Coastal Jewish Wedding, Luxury Wine Country Corporate Retreat">
                     </div>
                     
-                    <!-- Style -->
                     <div class="md:col-span-3">
                         <label class="block text-sm font-medium text-slate-300 mb-2">Style</label>
-                        <select id="style-select" class="w-full bg-slate-800 border border-slate-700 focus:border-indigo-500 text-white rounded-2xl px-5 py-3.5 focus:outline-none">
+                        <select id="style-select" class="w-full bg-slate-800 border border-slate-700 focus:border-emerald-500 text-white rounded-2xl px-5 py-3.5 focus:outline-none">
                             <option value="modern">Modern Minimal</option>
                             <option value="luxury">Luxe &amp; Opulent</option>
                             <option value="boho">Boho &amp; Organic</option>
-                            <option value="dark">Dark Academia</option>
+                            <option value="dark">Dark &amp; Moody</option>
                             <option value="vibrant">Vibrant &amp; Bold</option>
                             <option value="corporate">Clean Corporate</option>
                         </select>
@@ -132,7 +159,7 @@
                     
                     <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-slate-300 mb-2">Images</label>
-                        <select id="images-select" class="w-full bg-slate-800 border border-slate-700 focus:border-indigo-500 text-white rounded-2xl px-5 py-3.5 focus:outline-none">
+                        <select id="images-select" class="w-full bg-slate-800 border border-slate-700 focus:border-emerald-500 text-white rounded-2xl px-5 py-3.5 focus:outline-none">
                             <option value="6">6 images</option>
                             <option value="9" selected>9 images</option>
                             <option value="12">12 images</option>
@@ -141,9 +168,21 @@
                     
                 </div>
                 
+                <!-- Quick Start Buttons -->
+                <div class="mt-6">
+                    <div class="text-sm text-slate-400 mb-2">Quick-start Sonoma themes:</div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="quickTheme('Rooted Romance Sonoma 2026 - plum olive terracotta fig merlot vineyard luxury')" class="px-4 py-1.5 text-xs bg-rose-600 hover:bg-rose-500 rounded-full border border-rose-700">Rooted Romance 2026</button>
+                        <button onclick="quickTheme('Modern Bar Mitzvah in the Redwoods')" class="px-4 py-1.5 text-xs bg-slate-800 hover:bg-emerald-600 rounded-full border border-slate-700">Redwood Bar Mitzvah</button>
+                        <button onclick="quickTheme('Boho Bat Mitzvah at the Coast')" class="px-4 py-1.5 text-xs bg-slate-800 hover:bg-emerald-600 rounded-full border border-slate-700">Coastal Bat Mitzvah</button>
+                        <button onclick="quickTheme('Luxury Jewish Wedding Sonoma')" class="px-4 py-1.5 text-xs bg-slate-800 hover:bg-emerald-600 rounded-full border border-slate-700">Jewish Wedding</button>
+                        <button onclick="quickTheme('Elegant Corporate Retreat Healdsburg')" class="px-4 py-1.5 text-xs bg-slate-800 hover:bg-emerald-600 rounded-full border border-slate-700">Corporate Retreat</button>
+                    </div>
+                </div>
+                
                 <div class="flex flex-col sm:flex-row gap-4 mt-8">
                     <button onclick="generateMoodBoard()" 
-                            class="flex-1 bg-indigo-600 hover:bg-indigo-500 transition-all text-white font-semibold py-4 rounded-2xl flex items-center justify-center gap-x-3 text-lg shadow-lg shadow-indigo-500/30">
+                            class="flex-1 bg-emerald-600 hover:bg-emerald-500 transition-all text-white font-semibold py-4 rounded-2xl flex items-center justify-center gap-x-3 text-lg shadow-lg shadow-emerald-500/30">
                         <i class="fa-solid fa-magic"></i>
                         <span>Generate Mood Board</span>
                     </button>
@@ -184,11 +223,11 @@
                 <div class="mb-8">
                     <div class="flex items-center justify-between mb-3">
                         <div class="font-semibold flex items-center gap-x-2">
-                            <i class="fa-solid fa-palette text-indigo-400"></i>
+                            <i class="fa-solid fa-palette text-emerald-400"></i>
                             <span>Color Palette</span>
                         </div>
                         <button onclick="copyPalette()" 
-                                class="text-xs flex items-center gap-x-1.5 text-indigo-400 hover:text-indigo-300">
+                                class="text-xs flex items-center gap-x-1.5 text-emerald-400 hover:text-emerald-300">
                             <i class="fa-solid fa-copy"></i> <span>Copy all hex codes</span>
                         </button>
                     </div>
@@ -199,7 +238,7 @@
                 <!-- Keywords -->
                 <div class="mb-8">
                     <div class="font-semibold mb-3 flex items-center gap-x-2">
-                        <i class="fa-solid fa-tags text-indigo-400"></i>
+                        <i class="fa-solid fa-tags text-emerald-400"></i>
                         <span>Key Mood Words</span>
                     </div>
                     <div id="keywords-container" class="flex flex-wrap gap-2"></div>
@@ -209,7 +248,7 @@
                 <div class="mb-8">
                     <div class="font-semibold mb-3 flex items-center justify-between">
                         <div class="flex items-center gap-x-2">
-                            <i class="fa-solid fa-images text-indigo-400"></i>
+                            <i class="fa-solid fa-images text-emerald-400"></i>
                             <span>Visual References</span>
                         </div>
                         <span class="text-xs text-slate-500">Click images to enlarge</span>
@@ -221,27 +260,27 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6">
                         <div class="font-semibold mb-4 flex items-center gap-x-2">
-                            <i class="fa-solid fa-font text-indigo-400"></i>
+                            <i class="fa-solid fa-font text-emerald-400"></i>
                             <span>Typography Suggestions</span>
                         </div>
                         <div id="typography-suggestions" class="space-y-3 text-sm"></div>
                     </div>
                     
                     <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6">
-                        <div class="font-semibold mb-4">Why this works</div>
+                        <div class="font-semibold mb-4">Why this works in Sonoma</div>
                         <div id="why-this-works" class="text-slate-300 text-sm leading-relaxed"></div>
                     </div>
                 </div>
                 
                 <!-- CTA Funnel -->
-                <div class="mt-8 p-6 bg-gradient-to-r from-indigo-950 to-slate-900 border border-indigo-800 rounded-3xl flex flex-col md:flex-row items-center gap-6">
+                <div class="mt-8 p-6 bg-gradient-to-r from-emerald-950 to-slate-900 border border-emerald-800 rounded-3xl flex flex-col md:flex-row items-center gap-6">
                     <div class="flex-1">
-                        <div class="font-semibold text-lg">Ready to turn this into a real project?</div>
-                        <div class="text-sm text-slate-400 mt-1">Get the full editable Canva template + shopping list + brand guidelines.</div>
+                        <div class="font-semibold text-lg">Want this for your clients or family?</div>
+                        <div class="text-sm text-slate-400 mt-1">Get the full editable Canva template + local Sonoma vendor shopping list + 30-min strategy call.</div>
                     </div>
                     <button onclick="showUpgradeModal()" 
                             class="px-8 py-3.5 bg-white hover:bg-slate-100 transition-colors text-slate-900 font-bold rounded-2xl flex-shrink-0 flex items-center gap-x-2">
-                        <span>Get Full Template — $19</span>
+                        <span>Book a Call — Starting at $497</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -251,34 +290,34 @@
     </div>
 
     <footer class="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
-        Made with ❤️ for creators • Free to use • No sign-up required
+        Built locally in Santa Rosa for Sonoma County planners, families &amp; creators • Free forever • No sign-up
     </footer>
 
     <!-- Upgrade Modal -->
     <div id="upgrade-modal" onclick="hideUpgradeModal()" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
         <div onclick="event.stopImmediatePropagation()" class="max-w-md w-full mx-4 bg-slate-900 border border-slate-700 rounded-3xl p-8">
-            <h3 class="text-2xl font-bold mb-2">Unlock the full experience</h3>
-            <p class="text-slate-400 mb-6">Get the complete editable Canva template, color system, and shopping list for this exact mood board.</p>
+            <h3 class="text-2xl font-bold mb-2">Ready for the full experience?</h3>
+            <p class="text-slate-400 mb-6">Get custom branded mood boards, full Canva templates, local vendor lists, and strategy calls tailored for your Sonoma County clients or family event.</p>
             
             <div class="space-y-3 mb-6">
                 <div class="flex items-center gap-x-3 text-sm">
                     <i class="fa-solid fa-check text-emerald-400"></i>
-                    <span>Fully editable Canva file</span>
+                    <span>Full editable Canva template + shopping list</span>
                 </div>
                 <div class="flex items-center gap-x-3 text-sm">
                     <i class="fa-solid fa-check text-emerald-400"></i>
-                    <span>Shopping list with direct links</span>
+                    <span>30-minute strategy call with local insights</span>
                 </div>
                 <div class="flex items-center gap-x-3 text-sm">
                     <i class="fa-solid fa-check text-emerald-400"></i>
-                    <span>Brand guideline PDF</span>
+                    <span>White-label version for your business</span>
                 </div>
             </div>
             
-            <a href="https://your-gumroad-link.com" target="_blank" 
-               class="block w-full text-center bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-semibold transition-colors">
-                Get it now for $19
-            </a>
+            <button onclick="window.location.href='https://calendly.com/davidblake-sonoma/30min'" 
+                    class="block w-full text-center bg-emerald-600 hover:bg-emerald-500 py-4 rounded-2xl font-semibold transition-colors">
+                Book Your Free 15-Min Strategy Call
+            </button>
             
             <div class="text-center mt-4">
                 <button onclick="hideUpgradeModal()" class="text-xs text-slate-500 hover:text-slate-400">Maybe later</button>
@@ -286,27 +325,21 @@
         </div>
     </div>
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Tailwind script
         function initializeTailwind() {
-            document.documentElement.style.setProperty('--accent', '#6366f1');
+            // Tailwind is already loaded via CDN
         }
         
         let currentBoard = null;
         
         function generateMoodBoard() {
-            const theme = document.getElementById('theme-input').value.trim() || "modern minimalist aesthetic";
+            const theme = document.getElementById('theme-input').value.trim() || "Wine Country event";
             const style = document.getElementById('style-select').value;
             const numImages = parseInt(document.getElementById('images-select').value);
             
-            // Generate the board data
             currentBoard = createBoardData(theme, style, numImages);
-            
-            // Render everything
             renderResults(currentBoard);
             
-            // Scroll to results
             document.getElementById('results-section').scrollIntoView({ 
                 behavior: 'smooth', 
                 block: 'start' 
@@ -315,7 +348,21 @@
         
         function createBoardData(theme, style, numImages) {
             const styleData = getStyleData(style);
-            const colors = generateColorPalette(style);
+            let colors;
+            
+            // Special handling for Rooted Romance trending theme
+            if (theme.toLowerCase().includes('rooted romance') || theme.toLowerCase().includes('plum olive terracotta')) {
+                colors = [
+                    { hex: "#4A2C4A", name: "Deep Plum" },
+                    { hex: "#556B2F", name: "Olive Grove" },
+                    { hex: "#C65D3B", name: "Terracotta" },
+                    { hex: "#722F37", name: "Merlot" },
+                    { hex: "#C9A227", name: "Golden Fig" }
+                ];
+            } else {
+                colors = generateColorPalette(style);
+            }
+            
             const keywords = generateKeywords(theme, style);
             const images = generateImages(theme, numImages);
             const fonts = getTypographySuggestions(style);
@@ -335,12 +382,12 @@
         
         function getStyleData(style) {
             const styles = {
-                modern: { name: "Modern Minimal", vibe: "clean, sophisticated, timeless" },
-                luxury: { name: "Luxe & Opulent", vibe: "rich, elegant, high-end" },
-                boho: { name: "Boho & Organic", vibe: "warm, earthy, free-spirited" },
-                dark: { name: "Dark Academia", vibe: "moody, intellectual, mysterious" },
-                vibrant: { name: "Vibrant & Bold", vibe: "energetic, playful, confident" },
-                corporate: { name: "Clean Corporate", vibe: "professional, trustworthy, modern" }
+                modern: { name: "Modern Minimal", vibe: "clean, sophisticated" },
+                luxury: { name: "Luxe & Opulent", vibe: "rich, elegant" },
+                boho: { name: "Boho & Organic", vibe: "warm, earthy" },
+                dark: { name: "Dark & Moody", vibe: "dramatic, intimate" },
+                vibrant: { name: "Vibrant & Bold", vibe: "energetic, joyful" },
+                corporate: { name: "Clean Corporate", vibe: "professional, modern" }
             };
             return styles[style] || styles.modern;
         }
@@ -348,21 +395,20 @@
         function generateColorPalette(style) {
             let baseHue;
             switch(style) {
-                case 'modern': baseHue = 220; break;      // Cool blue
-                case 'luxury': baseHue = 35; break;       // Warm gold
-                case 'boho': baseHue = 25; break;         // Terracotta
-                case 'dark': baseHue = 260; break;        // Deep purple
-                case 'vibrant': baseHue = 340; break;     // Hot pink/coral
-                case 'corporate': baseHue = 210; break;   // Professional blue
-                default: baseHue = 220;
+                case 'modern': baseHue = 160; break;
+                case 'luxury': baseHue = 35; break;
+                case 'boho': baseHue = 25; break;
+                case 'dark': baseHue = 260; break;
+                case 'vibrant': baseHue = 340; break;
+                case 'corporate': baseHue = 200; break;
+                default: baseHue = 160;
             }
             
             const colors = [];
-            // Generate 5 harmonious colors
             for (let i = 0; i < 5; i++) {
-                const hue = (baseHue + (i * 25) - 30) % 360;
-                const saturation = style === 'dark' ? 25 + (i * 5) : 45 + (i * 8);
-                const lightness = style === 'dark' ? 15 + (i * 12) : 35 + (i * 10);
+                const hue = (baseHue + (i * 25) - 20) % 360;
+                const saturation = style === 'dark' ? 30 + (i * 5) : 50 + (i * 8);
+                const lightness = style === 'dark' ? 18 + (i * 12) : 38 + (i * 10);
                 
                 const hex = hslToHex(hue, saturation, lightness);
                 colors.push({
@@ -387,33 +433,28 @@
         function getColorName(hue) {
             if (hue < 20) return "Warm Sand";
             if (hue < 40) return "Terracotta";
-            if (hue < 60) return "Golden Hour";
-            if (hue < 90) return "Olive";
-            if (hue < 140) return "Sage";
-            if (hue < 180) return "Teal";
-            if (hue < 220) return "Ocean";
-            if (hue < 260) return "Indigo";
-            if (hue < 300) return "Amethyst";
-            return "Rose";
+            if (hue < 70) return "Olive";
+            if (hue < 160) return "Sage";
+            if (hue < 200) return "Teal";
+            if (hue < 240) return "Ocean";
+            if (hue < 280) return "Deep Plum";
+            return "Fig";
         }
         
         function generateKeywords(theme, style) {
             const baseWords = theme.toLowerCase().split(' ').filter(w => w.length > 3);
             const styleWords = {
-                modern: ["minimal", "clean", "sophisticated", "timeless", "architectural"],
-                luxury: ["opulent", "rich", "elegant", "premium", "refined"],
-                boho: ["organic", "warm", "textured", "free-spirited", "earthy"],
-                dark: ["moody", "intellectual", "mysterious", "vintage", "dramatic"],
-                vibrant: ["bold", "energetic", "playful", "confident", "joyful"],
-                corporate: ["professional", "trustworthy", "modern", "clean", "reliable"]
+                modern: ["minimal", "clean", "sophisticated", "timeless"],
+                luxury: ["opulent", "rich", "elegant", "premium"],
+                boho: ["organic", "warm", "textured", "free-spirited"],
+                dark: ["moody", "dramatic", "intimate", "mysterious"],
+                vibrant: ["bold", "energetic", "joyful", "vibrant"],
+                corporate: ["professional", "modern", "clean", "trustworthy"]
             };
             
             let keywords = [...baseWords, ...styleWords[style]];
+            keywords = keywords.concat(["sonoma", "vineyard", "heritage", "simcha"]);
             
-            // Add some universal mood words
-            keywords = keywords.concat(["texture", "light", "balance", "harmony"]);
-            
-            // Shuffle and take unique
             return [...new Set(keywords)].slice(0, 8);
         }
         
@@ -422,7 +463,6 @@
             const seed = theme.replace(/\s+/g, '-').toLowerCase();
             
             for (let i = 0; i < count; i++) {
-                // Use picsum with seed for consistent but varied images
                 const imgUrl = `https://picsum.photos/seed/${seed}-${i}/600/400`;
                 images.push({
                     url: imgUrl,
@@ -463,31 +503,33 @@
         }
         
         function generateWhyThisWorks(theme, style) {
+            if (theme.toLowerCase().includes('rooted romance') || theme.toLowerCase().includes('plum olive')) {
+                return "This palette perfectly captures the rich, grounded elegance of Sonoma’s vineyards at sunset. Deep plums and terracotta feel romantic yet sophisticated — ideal for 2026 mitzvahs and weddings that want to feel both timeless and current.";
+            }
+            
             const reasons = {
-                modern: "Clean lines and negative space create a sense of calm and clarity — perfect for brands that want to feel premium and trustworthy.",
-                luxury: "Rich textures and deep tones signal exclusivity and quality. This palette instantly communicates high-end positioning.",
-                boho: "Earthy tones and organic shapes feel warm and approachable while still feeling curated and intentional.",
-                dark: "Deep moody colors + dramatic lighting create an intellectual, mysterious atmosphere that feels sophisticated.",
-                vibrant: "Bold color choices and energetic composition make the brand feel confident, joyful, and memorable.",
-                corporate: "Professional yet approachable — builds instant trust while staying modern and forward-thinking."
+                modern: "Clean lines and negative space create calm and clarity — perfect for modern Sonoma events that still feel warm and inviting.",
+                luxury: "Rich textures and deep tones instantly communicate premium quality, matching the high-end expectations of Wine Country clients.",
+                boho: "Earthy tones and organic shapes feel approachable and celebratory while staying curated and intentional.",
+                dark: "Moody colors + dramatic lighting create an intimate, sophisticated atmosphere perfect for evening celebrations.",
+                vibrant: "Bold choices make the event feel joyful, energetic, and memorable — great for younger crowds and mitzvahs.",
+                corporate: "Professional yet approachable — builds trust while staying modern and forward-thinking for retreats and launches."
             };
             return reasons[style] || reasons.modern;
         }
         
         function renderResults(board) {
-            // Show results section
             document.getElementById('results-section').classList.remove('hidden');
             
-            // Title
             document.getElementById('board-title').innerHTML = board.theme;
             document.getElementById('board-subtitle').innerHTML = 
-                `${getStyleData(board.style).name} • Generated just now`;
+                `${getStyleData(board.style).name} • Generated for Sonoma County`;
             
             // Colors
             const colorContainer = document.getElementById('color-palette');
             colorContainer.innerHTML = '';
             
-            board.colors.forEach((color, index) => {
+            board.colors.forEach((color) => {
                 const div = document.createElement('div');
                 div.className = `flex flex-col items-center cursor-pointer`;
                 div.innerHTML = `
@@ -517,7 +559,7 @@
             const imageGrid = document.getElementById('image-grid');
             imageGrid.innerHTML = '';
             
-            board.images.forEach((img, index) => {
+            board.images.forEach((img) => {
                 const imgEl = document.createElement('div');
                 imgEl.className = `relative group overflow-hidden rounded-2xl border border-slate-700 aspect-[4/3] cursor-pointer`;
                 imgEl.innerHTML = `
@@ -537,58 +579,45 @@
                 const div = document.createElement('div');
                 div.className = `flex justify-between items-center py-1 border-b border-slate-800 last:border-none`;
                 div.innerHTML = `
-                    <div>
-                        <span class="font-medium">${font.name}</span>
-                    </div>
+                    <div><span class="font-medium">${font.name}</span></div>
                     <div class="text-xs text-slate-500">${font.usage}</div>
                 `;
                 typoContainer.appendChild(div);
             });
             
-            // Why this works
             document.getElementById('why-this-works').innerHTML = board.why;
-            
-            // Store current board for sharing
             window.currentBoardData = board;
+        }
+        
+        function quickTheme(theme) {
+            document.getElementById('theme-input').value = theme;
+            generateMoodBoard();
         }
         
         function regenerateBoard() {
             if (!currentBoard) return;
-            
-            const newBoard = createBoardData(
-                currentBoard.theme, 
-                currentBoard.style, 
-                currentBoard.images.length
-            );
-            
+            const newBoard = createBoardData(currentBoard.theme, currentBoard.style, currentBoard.images.length);
             currentBoard = newBoard;
             renderResults(newBoard);
         }
         
         function copyPalette() {
             if (!currentBoard) return;
-            
             const hexCodes = currentBoard.colors.map(c => c.hex).join('\n');
             copyToClipboard(hexCodes, 'Color palette copied!');
         }
         
         function copyBoardLink() {
             if (!currentBoard) return;
-            
-            const shareData = encodeURIComponent(JSON.stringify({
-                theme: currentBoard.theme,
-                style: currentBoard.style
-            }));
-            
+            const shareData = encodeURIComponent(JSON.stringify({ theme: currentBoard.theme, style: currentBoard.style }));
             const url = `${window.location.origin}${window.location.pathname}?board=${shareData}`;
-            
             copyToClipboard(url, 'Link copied! Share this mood board.');
         }
         
         function copyToClipboard(text, message) {
             navigator.clipboard.writeText(text).then(() => {
                 const toast = document.createElement('div');
-                toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-6 py-3 rounded-2xl shadow-xl flex items-center gap-x-2 text-sm`;
+                toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-6 py-3 rounded-2xl shadow-xl flex items-center gap-x-2 text-sm z-[200]`;
                 toast.innerHTML = `<i class="fa-solid fa-check"></i> <span>${message}</span>`;
                 document.body.appendChild(toast);
                 
@@ -598,25 +627,23 @@
                     setTimeout(() => toast.remove(), 300);
                 }, 2200);
             }).catch(() => {
-                // Fallback
                 prompt('Copy this:', text);
             });
         }
         
         function useRandomExample() {
             const examples = [
-                "coastal luxury villa with organic textures",
-                "dark academia bookstore aesthetic",
-                "vibrant streetwear brand identity",
-                "minimal tech startup office",
-                "warm boho wedding inspiration",
-                "high-end skincare brand mood"
+                "Rooted Romance Sonoma 2026 - plum olive terracotta fig merlot vineyard luxury",
+                "Modern Bar Mitzvah in the Redwoods",
+                "Boho Bat Mitzvah at the Coast",
+                "Luxury Jewish Wedding Sonoma",
+                "Elegant Corporate Retreat Healdsburg",
+                "Warm Boho Wedding in Dry Creek Valley"
             ];
             
             const randomTheme = examples[Math.floor(Math.random() * examples.length)];
             document.getElementById('theme-input').value = randomTheme;
             
-            // Pick random style
             const styles = ['modern', 'luxury', 'boho', 'dark', 'vibrant', 'corporate'];
             const randomStyle = styles[Math.floor(Math.random() * styles.length)];
             document.getElementById('style-select').value = randomStyle;
@@ -637,18 +664,16 @@
         function initializeGenerator() {
             initializeTailwind();
             
-            // Pre-fill with a nice example
-            document.getElementById('theme-input').value = "coastal boho luxury villa";
+            // Pre-fill with trending theme
+            document.getElementById('theme-input').value = "Rooted Romance Sonoma 2026 - plum olive terracotta fig merlot vineyard luxury";
             
-            // Check for shared board in URL
+            // Check for shared board
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('board')) {
                 try {
                     const shared = JSON.parse(decodeURIComponent(urlParams.get('board')));
                     document.getElementById('theme-input').value = shared.theme;
                     document.getElementById('style-select').value = shared.style;
-                    
-                    // Auto-generate after short delay
                     setTimeout(() => {
                         generateMoodBoard();
                     }, 600);
@@ -663,19 +688,11 @@
                 }
             });
             
-            // Easter egg: click logo to random generate
-            const logo = document.querySelector('.fa-palette');
-            if (logo) {
-                logo.parentElement.onclick = () => useRandomExample();
-            }
-            
-            console.log('%c[MoodForge] Generator ready. Built for your funnel.', 'color:#64748b');
+            console.log('%c[SonomaForge] Ready for leads. Built for Sonoma County.', 'color:#10b981');
         }
         
-        // Boot it up
         window.onload = initializeGenerator;
         
-        // Bonus: Allow Enter key to generate
         document.addEventListener('keypress', function(e) {
             if (e.key === 'Enter' && document.getElementById('theme-input') === document.activeElement) {
                 generateMoodBoard();
